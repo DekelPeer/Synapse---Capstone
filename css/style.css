@@ -1,0 +1,214 @@
+:root {
+	--color-primary: #b83b5e;
+	--radius-buttons: 75px;
+	--hover-color: whitesmoke;
+	--font: "Orbitron", sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	color: var(--color-primary);
+	font-family: var(--font);
+	font-optical-sizing: auto;
+	text-transform: uppercase;
+}
+
+.gradient-bar {
+	display: flex;
+	background: linear-gradient(-45deg, #f1f8c7, #fffab0, #f1f0b0, #f8fdae);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 12vh;
+	font-weight: 800;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer {
+	justify-content: center;
+}
+
+h1 {
+	font-weight: 900;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.synapse-logo {
+	max-width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.contact-top {
+	font-family: var(--font);
+	font-size: 1rem;
+	color: var(--color-primary);
+	border: 0;
+	font-weight: 700;
+	border-radius: var(--radius-buttons);
+	padding: 0.6rem 1.5rem;
+	cursor: pointer;
+	background: none;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	margin-right: 5px;
+}
+
+.contact-top:hover {
+	background-color: var(--color-primary);
+	color: var(--hover-color);
+}
+
+.contact-top:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+.pitch-container {
+	display: flex;
+	padding: 200px 10px 300px 40px;
+	font-weight: 500;
+	align-items: center;
+	justify-content: space-between;
+	gap: clamp(40px, 8vw, 300px);
+}
+
+.graphic {
+	max-width: fit-content;
+}
+
+.services-container {
+	padding-left: 40px;
+}
+
+.pricing {
+	padding-bottom: 80px;
+}
+
+.pricing-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 100px;
+	flex-wrap: wrap;
+}
+
+.pricing-plan {
+	border: var(--color-primary) solid;
+	padding: 30px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.plan-button {
+	font-family: "Orbitron", sans-serif;
+	color: var(--color-primary);
+	background-color: var(--hover-color);
+	border: 0;
+	font-weight: 400;
+	border-radius: var(--radius-buttons);
+	padding: 0.6rem 1.5rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.plan-button:hover {
+	background-color: var(--color-primary);
+	color: var(--hover-color);
+}
+
+.plan-button:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+.contact-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 250px;
+	padding-left: 40px;
+}
+
+.git-image {
+	max-width: 100%;
+	height: 100%;
+	object-fit: contain;
+	margin-right: 45px;
+}
+
+input {
+	width: 80%;
+	font-family: var(--font);
+	text-transform: uppercase;
+	border: none;
+}
+
+
+.contact-form {
+	margin-left: 40px;
+	margin: 15px 0px 50px 40px;
+	display: grid;
+	grid-template-columns: 40% 40%;
+	gap: 20px;
+	grid-template-rows: repeat(2, 100px);
+	font-weight: 500;
+}
+
+.text-input:hover,
+.text-input:focus {
+	border: #b83b5e solid;
+	border-radius: 10px;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+@media (max-width: 800px) {
+	.pitch-container {
+		flex-direction: column;
+		padding: 80px 20px;
+		max-width: fit-content;
+	}
+
+	.pricing {
+		max-width: fit-content;
+	}
+
+	.pricing-container {
+		flex-direction: column;
+		max-width: fit-content;
+	}
+
+	.contact-container {
+		margin-top: 150px;
+	}
+
+	.git-image {
+		margin-top: 10px;
+		margin-right: 0px;
+	}
+
+	.contact-form {
+		grid-template-columns: 1fr;
+		margin: 0px 0px 170px 40px;
+		grid-template-rows: repeat(4, auto);
+	}
+}
