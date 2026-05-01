@@ -12,8 +12,7 @@ The focus was to build a clean & responsive website using Flexbox, Grid, etc.
 
 ## Live Demo
 
-[Add your deployed link here]
-_(Example: https://your-project.netlify.app)_
+https://dekelpeer.github.io/Synapse---Capstone/
 
 ## Features
 
